@@ -98,7 +98,7 @@ def alcohol(age,money):
 		return "denied"
 print(alcohol(21,3))
 nl()
-movies=["im gay", "iron man" , "iron giant", "madea"]
+movies=["top gun", "iron man" , "iron giant", "madea"]
 nl()
 
 grades=[["bob",82],["alice",90],["jeff",64]]
@@ -113,7 +113,7 @@ nl()
 
 #looping
 #for  loops starts to finish of an iterate
-veggie=["beans","gay","meat"]
+veggie=["beans","carrot","meat"]
 for  x in veggie:
 	print(x)
 	
