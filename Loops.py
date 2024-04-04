@@ -45,13 +45,25 @@ names = ["Dave", "Sara", "John"]
 # else:
 #     print("glad that\'s over")
 
-names = ["Dave", "Sara", "John"]
-actions = ["codes", "eats", "sleeps"]
+# names = ["Dave", "Sara", "John"]
+# actions = ["codes", "eats", "sleeps"]
 
-# for name in names:
-#     for action in actions:
+# # for name in names:
+# #     for action in actions:
+# #         print(name + " " + action + ".")
+
+# for action in actions:
+#     for name in names:
 #         print(name + " " + action + ".")
 
-for action in actions:
-    for name in names:
-        print(name + " " + action + ".")
+value = "y"
+count = 0
+
+while value:
+    count  += 1
+    print(count)
+    if (count == 5):
+        break
+    else:
+        value = 0
+        continue
