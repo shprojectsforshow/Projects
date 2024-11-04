@@ -13,10 +13,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "scooterk-bucket"
+  bucket = var.aws_s3_bucket_name
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+  tags = var.aws_tagging
 }
