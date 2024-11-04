@@ -9,11 +9,29 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-# Configuration options
+  alias  = "ue1"
+  # Configuration options
+}
+
+provider "aws" {
+  region = "eu-west-1"
+  alias  = "ew1"
+  # Configuration options
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "scooterk-bucket"
+  bucket   = "scooterk-bucket"
+  provider = aws.ue1
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+resource "aws_s3_bucket" "example_2" {
+  bucket   = "scooterk-bucket"
+  provider = aws.ew1
 
   tags = {
     Name        = "My bucket"
