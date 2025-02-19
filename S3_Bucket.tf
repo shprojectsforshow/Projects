@@ -1,18 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "5.73.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-# Configuration options
-}
-
-resource "aws_s3_bucket" "example" {
+resource "aws_s3_bucket" "scooterk-bucket" {
   bucket = var.aws_s3_bucket_name
 
   tags = var.aws_tagging
